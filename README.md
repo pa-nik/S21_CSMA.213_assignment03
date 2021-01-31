@@ -24,7 +24,7 @@ Use the following binary sequence as a mask and apply it to the first child prod
 
 **Q4.** [1 point] Let's assume the binary encoded chromosomes you generated represent characters of a string.  Convert the binary codes of the chromosomes (use the first child mutated in Q3 and the second child from Q2) into strings by looking up ASCII codes for each 8 bits of the chromosome sequence.
 
-You can do this step by converting 8-bit binary sequences into decimal numbers first, then looking them up in an [ASCII Table](https://www.rapidtables.com/code/text/ascii-table.html). For example, if the first 8 bits of a sequence are `01000001`, this corresponds to the decimal value `65` and ASCII character `'A'` (note that you can type in the fields above **Dec** or **Char** columns above to jump to the correct row)
+You can do this step by converting 8-bit binary sequences into decimal numbers first, then looking them up in an [ASCII Table](https://www.rapidtables.com/code/text/ascii-table.html). For example, if the first 8 bits of a sequence are `01000001`, this corresponds to the decimal value `65` and ASCII character `'A'` (note that you can type in the fields above **Dec** or **Char** columns of the ASCII Table to jump to the corresponding table row)
 
 After you convert one 8-bit sequence into a character, move on to the next 8-bit sequence.  At the end of the process you should be able to convert the binary data of each chromosome into a 7-character sring. Add the strings you generated to the text file. 
 
