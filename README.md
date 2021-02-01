@@ -1,6 +1,6 @@
 ### S21_CSMA.213 assignment03
 
-This week's assignment deals with genetic algorithms.  The first few questions ask you to perform **crossover** and **mutation** operations similar to what we discussed in class (you can also use Chapter 4 of *Grokking Artificial Intelligence Algorithms* for reference).
+This week's assignment deals with genetic algorithms.  The first few questions ask you to perform **crossover** and **mutation** operations similar to what we discussed in class (you can also use Chapter 4 of *Grokking Artificial Intelligence Algorithms* for reference):
 
 Let's assume that the following 2 individuals were chosen out of a population of binary encoded chromosomes that are each 56 bits in length (grouped in 8 bits for readability):
 
@@ -27,4 +27,36 @@ Use the following binary sequence as a mask and apply it to the first child prod
 You can do this step by converting 8-bit binary sequences into decimal numbers first, then looking them up in an [ASCII Table](https://www.rapidtables.com/code/text/ascii-table.html). For example, if the first 8 bits of a sequence are `01000001`, this corresponds to the decimal value `65` and ASCII character `'A'` (note that you can type in the fields above **Dec** or **Char** columns of the ASCII Table to jump to the corresponding table row)
 
 After you convert one 8-bit sequence into a character, move on to the next 8-bit sequence.  At the end of the process you should be able to convert the binary data of each chromosome into a 7-character sring. Add the strings you generated to the text file. 
+
+---
+
+
+For the second part of the assignment, you will work with the Pandas library objects and methods to help structure data for a genetic algorithm implementation of the classic Traveling Salesman Problem (TSP):
+
+**Q5.** [1 point] Given two lists of data with `x` and `y` containing 52 coordinates each, create **pandas series** objects `xds` and `yds` containing these values.  In addition, create a pandas series `nds` that is a sequence of values from 0 to 51 representing cities to be visited by the traveling salesman (["Introducing Pandas Objects"](https://jakevdp.github.io/PythonDataScienceHandbook/03.01-introducing-pandas-objects.html) is a good reference for getting started with the pandas library)
+
+The lists of coordinates are provided in the code template file `tsp_template.py`, available in this repository.  Note that this file will utilize `tsp_ga.py` as a module incorporating the genetic algorithm implementation that will help evolve a solution to the TSP problem.
+
+**Q6.** [1 point] Construct a **pandas dataframe** object `tsp_data` that will incorporate `nds`, `xds`, and `yds` series as columns of a table labeled `city`, `x` and `y` in order (you may find it useful to looks up how to [create a dataframe from Pandas series](https://www.geeksforgeeks.org/creating-a-dataframe-from-pandas-series/)).  The head (first 5 rows) of your dataframe should like the following, if constructed correctly:
+
+```
+   city      x      y
+0     0  565.0  575.0
+1     1   25.0  185.0
+2     2  345.0  750.0
+3     3  945.0  685.0
+4     4  845.0  655.0
+```
+
+**Q7.** [2 points] Uncomment the code that begins with the line 29, which will create the `TSPGA` object and run the genetic algorithm on `tsp_data` using parameters specified in `tsp_ga` instance.
+
+Next, create a matplotlib simple line plot that graphs the list of all distances stored in `distanceList` with distances (distanceList items) plotted on the y-axis and iterations (distanceList item indexes) plotted on the x-axis (you can refer to [Simple Line Plots](https://jakevdp.github.io/PythonDataScienceHandbook/04.01-simple-line-plots.html) from the *Python Data Science Handbook*)
+
+Figure out how to set the default plot line color to solid green.  Finally, add the title "Traveling Salesman" to the plot, as well as the x-label "Iteration" and y-label "Distance" to complete it.  Plot the resulting graph and save the generated image to submit with this assignment.
+
+**Q8.** [1 point] Look through the file `tsp_ga.py` and figure out how to print the best tour (shortest path) produced by the genetic algorithm after it is run.  
+
+[Extra credit] Programmatically save the results of the best tour into a text file (figure out how to walk through the best tour and write each distance value one by one, separated by spaces or commas) to submit with this assignment.
+
+Good luck!
 
