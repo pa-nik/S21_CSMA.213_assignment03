@@ -48,7 +48,7 @@ The lists of coordinates are provided in the code template file `tsp_template.py
 4     4  845.0  655.0
 ```
 
-**Q7.** [2 points] Uncomment the code that begins with the line 29, which will create the `TSPGA` object and run the genetic algorithm on `tsp_data` using parameters specified in `tsp_ga` instance.
+**Q7.** [2 points] Uncomment the code that begins on line 31 of `tps_template.py`, which will create the `TSPGA` object and run the genetic algorithm on `tsp_data` using parameters specified in `tsp_ga` instance.
 
 Next, create a matplotlib simple line plot that graphs the list of all distances stored in `distanceList` with distances (distanceList items) plotted on the y-axis and iterations (distanceList item indexes) plotted on the x-axis (you can refer to [Simple Line Plots](https://jakevdp.github.io/PythonDataScienceHandbook/04.01-simple-line-plots.html) from the *Python Data Science Handbook*)
 
